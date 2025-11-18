@@ -9,9 +9,12 @@ function Home() {
     <Segment>
       <Header as="h2">Iframe App 1 - Home</Header>
       <p>Navigate to different forms using the buttons below.</p>
-      <p><strong>Test:</strong> Fill out forms, then try switching tabs to see if "Leave Site" prompt appears.</p>
+      <p>
+        <strong>Test:</strong> Fill out forms, then try switching tabs to see if &quot;Leave
+        Site&quot; prompt appears.
+      </p>
       
-      <Grid columns={3} stackable>
+      <Grid columns={4} stackable>
         <Grid.Column>
           <Card>
             <Card.Content>
@@ -67,6 +70,26 @@ function Home() {
                 onClick={() => navigate('/profile')}
               >
                 Go to Profile
+              </Button>
+            </Card.Content>
+          </Card>
+        </Grid.Column>
+
+        <Grid.Column>
+          <Card>
+            <Card.Content>
+              <Card.Header>Test Unsaved Changes</Card.Header>
+              <Card.Description>
+                Test page using useUnsavedChanges hook - only uses setHasChanges.
+              </Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <Button 
+                primary 
+                fluid 
+                onClick={() => navigate('/test-unsaved')}
+              >
+                Go to Test Page
               </Button>
             </Card.Content>
           </Card>

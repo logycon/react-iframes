@@ -11,6 +11,7 @@ export default function useUnsavedChanges() {
         e.returnValue = 'You have unsaved changes. Are you sure you want to leave?'
         return e.returnValue
       }
+      return undefined
     }
 
     window.addEventListener('beforeunload', handleBeforeUnload)

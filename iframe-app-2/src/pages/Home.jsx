@@ -9,7 +9,10 @@ function Home() {
     <Segment>
       <Header as="h2">Iframe App 2 - Home</Header>
       <p>Navigate to different forms using the buttons below.</p>
-      <p><strong>Test:</strong> Fill out forms, then try switching tabs to see if "Leave Site" prompt appears.</p>
+      <p>
+        <strong>Test:</strong> Fill out forms, then try switching tabs to see if &quot;Leave
+        Site&quot; prompt appears.
+      </p>
       
       <Grid columns={3} stackable>
         <Grid.Column>

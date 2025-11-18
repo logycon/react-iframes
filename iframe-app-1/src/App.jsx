@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import ContactForm from './pages/ContactForm'
 import SettingsForm from './pages/SettingsForm'
 import ProfileForm from './pages/ProfileForm'
+import TestUnsavedChanges from './pages/TestUnsavedChanges'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
           <Route path="/settings" element={<SettingsForm />} />
           <Route path="/profile" element={<ProfileForm />} />
+          <Route path="/test-unsaved" element={<TestUnsavedChanges />} />
         </Routes>
       </div>
     </BrowserRouter>

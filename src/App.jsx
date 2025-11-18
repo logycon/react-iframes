@@ -36,7 +36,10 @@ function App() {
     <div className="App">
       <div className="header">
         <h1>Tab Iframe Investigation</h1>
-        <p>Investigating why tab switching doesn't trigger "Leave Site" prompt in Chrome</p>
+        <p>
+          Investigating why tab switching doesn&apos;t trigger &quot;Leave Site&quot; prompt in
+          Chrome
+        </p>
       </div>
       <Tab
         panes={panes}
