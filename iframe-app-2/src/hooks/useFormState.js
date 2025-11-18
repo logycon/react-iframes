@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react'
 
-export function useFormState(formData, initialData) {
+export default function useFormState(formData, initialData) {
   const [hasChanges, setHasChanges] = useState(false)
   const [isDirty, setIsDirty] = useState(false)
 
   // Track if form has been modified
   useEffect(() => {
-    const hasModifications = Object.keys(formData).some(key => {
-      const currentValue = formData[key]
-      const initialValue = initialData[key]
-      return currentValue !== initialValue
-    })
+    const hasModifications = Object.keys(formData).some(key => 
+      formData[key] !== initialData[key]
+    )
     setIsDirty(hasModifications)
     setHasChanges(hasModifications)
   }, [formData, initialData])

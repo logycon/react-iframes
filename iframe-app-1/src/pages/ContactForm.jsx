@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Form, Table, Button, Message, Segment, Header, Radio } from 'semantic-ui-react'
-import { useFormState } from '../hooks/useFormState'
+import useFormState from '../hooks/useFormState'
 
 function ContactForm() {
   const navigate = useNavigate()

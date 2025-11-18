@@ -1,17 +1,7 @@
 import { useState, useEffect } from 'react'
 
-export default function useFormState(formData, initialData) {
+export default function useUnsavedChanges() {
   const [hasChanges, setHasChanges] = useState(false)
-  const [isDirty, setIsDirty] = useState(false)
-
-  // Track if form has been modified
-  useEffect(() => {
-    const hasModifications = Object.keys(formData).some(key => 
-      formData[key] !== initialData[key]
-    )
-    setIsDirty(hasModifications)
-    setHasChanges(hasModifications)
-  }, [formData, initialData])
 
   // Set up beforeunload handler to trigger "Leave Site" prompt
   useEffect(() => {
@@ -30,6 +20,6 @@ export default function useFormState(formData, initialData) {
     }
   }, [hasChanges])
 
-  return { hasChanges, isDirty, setHasChanges, setIsDirty }
+  return { hasChanges, setHasChanges }
 }
 
